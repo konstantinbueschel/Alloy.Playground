@@ -1,0 +1,7 @@
+<Alloy>
+	<NavigationWindow id="navWindow">
+		<Window id="rootWindow">
+			<Button id="changeButton" color="#cdce00" onClick="_changeRoot">Change</Button>
+		</Window>
+	</NavigationWindow>
+</Alloy>

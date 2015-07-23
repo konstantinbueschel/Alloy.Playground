@@ -1,0 +1,41 @@
+<Alloy>
+
+	<Window id="window" title="Fliter">
+
+		<View id="headlineContainer" class="hgroup">
+			<Label id="tagIcon" class="icon" /><Label class="title">Interessen auswählen</Label>
+		</View>
+
+		<ScrollView id="grid">
+
+			<View id="leftColumn">
+
+				<Widget src="de.kbueschel.selectabletagview" text="Interessentag 1"/>
+				<Widget src="de.kbueschel.selectabletagview" text="Interessentag 2" top="10"/>
+				<Widget src="de.kbueschel.selectabletagview" text="Interessentag 3" top="10"/>
+				<Widget src="de.kbueschel.selectabletagview" text="Interessentag 4" top="10"/>
+
+			</View>
+
+			<View id="rightColumn">
+
+				<Widget src="de.kbueschel.selectabletagview" text="Interessentag 5"/>
+				<Widget src="de.kbueschel.selectabletagview" text="Interessentag 6" top="10"/>
+				<Widget src="de.kbueschel.selectabletagview" text="Interessentag 7" top="10"/>
+				<Widget src="de.kbueschel.selectabletagview" text="Interessentag 8" top="10"/>
+
+			</View>
+
+		</ScrollView>
+
+
+		<View class="line" />
+
+		<View id="buttonContainer" class="hgroup">
+			<Button id="closeButton" class="icon" title="close" />
+			<Button id="saveButton" class="icon" title="save" />
+		</View>
+
+	</Window>
+
+</Alloy>

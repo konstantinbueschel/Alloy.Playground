@@ -1,0 +1,5 @@
+<Alloy>
+	<Window title="SelectableTagView" class="container">
+		<Widget src="de.kbueschel.selectabletagview" id="tagView" />
+	</Window>
+</Alloy>

@@ -1,0 +1,13 @@
+
+".container" : {
+
+  top: 20,
+  backgroundColor: 'white'
+},
+
+
+'#tagView': {
+
+	top: '20%',
+	text: "I' am a tag"
+}

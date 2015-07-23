@@ -1,0 +1,10 @@
+<Alloy>
+	<View id="container" class="container size" onClick="toggle">
+		<View id="contentContainer" class="hgroup size no-touch">
+			<View id="iconContainer" class="no-touch" />
+			<View id="labelContainer" class="no-touch">
+				<Label id="tag" class="no-touch" />
+			</View>
+		</View>
+	</View>
+</Alloy>

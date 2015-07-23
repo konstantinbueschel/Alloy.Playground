@@ -1,0 +1,54 @@
+'.size': {
+
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE
+},
+
+
+'.no-touch': {
+
+	touchEnabled: false
+},
+
+
+'.hgroup': {
+
+	layout: 'horizontal'
+},
+
+
+'.container': {
+
+	width: 125,
+	height: 37,
+
+	borderRadius: 10
+},
+
+
+'Label': {
+
+	width: Ti.UI.FILL,
+	height: Ti.UI.FILL,
+
+	font: {
+
+		fontSize: 12
+	},
+
+	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT
+},
+
+
+'#iconContainer': {
+
+	width: 35,
+	height: 37
+},
+
+
+'#labelContainer': {
+
+	width: 90,
+	height: 37
+}

@@ -1,5 +1,15 @@
 ".container": {
-	backgroundColor:"white"
+	backgroundColor:"white",
+	barColor: '#cdce00',
+	titleAttributes: {
+
+		color: 'white'
+	}
+}
+
+'.container[platform=android]': {
+
+	exitOnClose: true
 }
 
 "Label": {
@@ -12,4 +22,32 @@
 	font: {
 		fontSize: 12
 	}
+}
+
+'#webView': {
+
+	backgroundColor: "transparent",
+	borderColor: "#cccccc",
+	borderRadius: 5,
+	borderWidth: 0,
+	height: '80%',
+	top: 0
+}
+
+'#webView[platform:ios]': {
+
+	top: 20
+}
+
+
+'.hgroup': {
+
+	bottom: 10,
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE
+}
+
+'.button[platform=ios]': {
+
+	color: '#000000'
 }

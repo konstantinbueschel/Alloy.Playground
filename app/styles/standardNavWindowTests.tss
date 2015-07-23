@@ -1,0 +1,14 @@
+".container" : {
+
+}
+
+'#rootWindow': {
+
+	title: 'Root Window',
+	barColor: '#cdce00',
+	backgroundColor: 'white',
+	titleAttributes: {
+
+		color: 'white'
+	}
+}

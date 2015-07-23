@@ -1,0 +1,9 @@
+<Alloy>
+	<Widget id="navDrawer" src="com.jpntex.navdrawer">
+		<View role="menu" backgroundColor="#cdce00">
+			<Label>Menu</Label>
+		</View>
+
+		<View role="main" backgroundColor="#808080" />
+	</Widget>
+</Alloy>

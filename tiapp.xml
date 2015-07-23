@@ -4,10 +4,10 @@
 	<id>de.dieinteraktiven.alloyplayground</id>
 	<name>Alloy.Playground</name>
 	<version>1.0.0</version>
-	<publisher>not specified</publisher>
-	<url>unspecified</url>
+	<publisher>Konstantin Büschel</publisher>
+	<url>https://github.com/konstantinbueschel</url>
 	<description/>
-	<copyright>not specified</copyright>
+	<copyright>2015 Konstantin Büschel</copyright>
 	<icon>appicon.png</icon>
 	<fullscreen>false</fullscreen>
 	<navbar-hidden>false</navbar-hidden>
@@ -17,6 +17,17 @@
 	<ios>
 		<plist>
 			<dict>
+				<key>CFBundleURLTypes</key>
+				<array>
+					<dict>
+						<key>CFBundleURLName</key>
+						<string>de.dieinteraktiven.alloyplayground</string>
+						<key>CFBundleURLSchemes</key>
+						<array>
+							<string>alloyplayground</string>
+						</array>
+					</dict>
+				</array>
 				<key>UISupportedInterfaceOrientations~iphone</key>
 				<array>
 					<string>UIInterfaceOrientationPortrait</string>
@@ -39,8 +50,45 @@
 			</dict>
 		</plist>
 	</ios>
-	<android
-			xmlns:android="http://schemas.android.com/apk/res/android">
+	<android xmlns:android="http://schemas.android.com/apk/res/android">
+		<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+		          android:versionCode="1" android:versionName="1.0.0">
+			<uses-sdk android:minSdkVersion="11" android:targetSdkVersion="22"/>
+			<application android:icon="@drawable/appicon" android:label="Alloy.Playground"
+			             android:name="AlloyPlaygroundApplication" android:debuggable="true"
+			             android:theme="@style/Theme.AppCompat">
+				<activity android:name=".AlloyPlaygroundActivity" android:label="@string/app_name"
+				          android:theme="@style/Theme.Titanium"
+				          android:configChanges="keyboardHidden|orientation|screenSize"
+				          android:alwaysRetainTaskState="true">
+					<intent-filter>
+						<action android:name="android.intent.action.MAIN"/>
+						<category android:name="android.intent.category.LAUNCHER"/>
+					</intent-filter>
+					<intent-filter>
+						<action android:name="android.intent.action.VIEW"/>
+						<category android:name="android.intent.category.DEFAULT"/>
+						<category android:name="android.intent.category.BROWSABLE"/>
+						<data android:scheme="alloyplayground"/>
+					</intent-filter>
+				</activity>
+				<activity android:name="org.appcelerator.titanium.TiActivity"
+				          android:configChanges="keyboardHidden|orientation|screenSize"/>
+				<activity android:name="org.appcelerator.titanium.TiTranslucentActivity"
+				          android:configChanges="keyboardHidden|orientation|screenSize"
+				          android:theme="@style/Theme.AppCompat.Translucent"/>
+				<activity android:name="ti.modules.titanium.ui.android.TiPreferencesActivity"
+				          android:configChanges="screenSize"/>
+				<service android:name="com.appcelerator.analytics.APSAnalyticsService" android:exported="false"/>
+			</application>
+			<uses-permission android:name="android.permission.INTERNET"/>
+			<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+			<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+			<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+			<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+			<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+			<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION"/>
+		</manifest>
 	</android>
 	<mobileweb>
 		<precache></precache>
@@ -51,15 +99,26 @@
 		<theme>default</theme>
 	</mobileweb>
 	<modules>
-		<module platform="commonjs">ti.cloud</module>
-	</modules>
+    <module platform="commonjs">ti.cloud</module>
+    <module platform="iphone">ti.draggable</module>
+    <module platform="iphone">com.kosso.tikblurlive</module>
+    <module platform="iphone" version="1.0.0">guy.mcdooooo.tibezier</module>
+    <module platform="iphone" version="1.0.4">guy.mcdooooo.tipop</module>
+    <module platform="android" version="1.2.0">de.marcelpociot.collectionview</module>
+    <module platform="iphone" version="1.4.0">de.marcelpociot.collectionview</module>
+    <module platform="iphone" version="1.0.0">hl.fxblurview</module>
+    <module platform="iphone">com.kosso.tikblurlive</module>
+    <module platform="android" version="0.2">bencoding.blur</module>
+    <module platform="iphone" version="0.37">bencoding.blur</module>
+    <module platform="iphone" version="1.0.0">com.apaladini.blur</module>
+  </modules>
 	<deployment-targets>
 		<target device="android">true</target>
 		<target device="ipad">true</target>
 		<target device="iphone">true</target>
 		<target device="mobileweb">true</target>
 	</deployment-targets>
-	<sdk-version>4.0.0.RC5</sdk-version>
+	<sdk-version>4.0.0.GA</sdk-version>
 	<plugins>
 		<plugin version="1.0">ti.alloy</plugin>
 	</plugins>

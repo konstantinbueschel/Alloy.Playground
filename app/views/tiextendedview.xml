@@ -1,0 +1,13 @@
+<Alloy>
+	<Window class="container" onOpen="_onFocus">
+
+		<WebView id="webView" url="http://interapps.de/apptests/url-scheme/" onBeforeload="_handleWebViewStateChange" onLoad="_handleWebViewStateChange" onError="_handleWebViewStateChange" />
+
+		<View class="hgroup">
+			<Button class="button" id="reload" onClick="_reload">RELOAD</Button>
+			<Button class="button" id="send_openurl" onClick="_send">openURL()</Button>
+			<Button class="button" id="send_openurl_intent" onClick="_send">openURL() Intent</Button>
+			<Button class="button" id="send_intent" onClick="_send">Intent</Button>
+		</View>
+	</Window>
+</Alloy>

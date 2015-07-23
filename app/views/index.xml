@@ -1,5 +1,20 @@
 <Alloy>
-	<Window class="container">
-		<Label id="label" onClick="doClick">Hello, World</Label>
-	</Window>
+	<NavigationWindow platform="ios" id="navigator">
+		<Window class="container" title="Playgrounds">
+			<TableView onClick="_onSelection">
+				<TableViewRow title="FlexiGrid" controller="FlexiGrid" openStandalone="false" openModal="true" />
+				<TableViewRow title="SelectableTagView" controller="SelectableTagView" openStandalone="false" />
+				<TableViewRow title="HamburgerButton" controller="bezier" openStandalone="false" />
+				<TableViewRow title="Dragable NavWindow" controller="draggableNavWindow" openStandalone="true" />
+				<TableViewRow title="Standard NavWindow Tests" controller="standardNavWindowTests" openStandalone="true" />
+				<TableViewRow title="jpntexNavDrawer" controller="jpntexNavDrawer" openStandalone="true" />
+				<TableViewRow title="eduuwmMenu" controller="eduuwmMenu"/>
+				<TableViewRow title="LiveBlur" controller="liveblur"/>
+				<TableViewRow title="Draggable Map" controller="draggableMap" openStandalone="true" />
+				<TableViewRow title="Draggable 2" controller="draggable2"/>
+				<TableViewRow title="Draggable 1" controller="draggable" />
+				<TableViewRow title="TiExtendedWebView Module" controller="tiextendedview"/>
+			</TableView>
+		</Window>
+	</NavigationWindow>
 </Alloy>
